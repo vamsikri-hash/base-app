@@ -1,64 +1,16 @@
 {
   "Userdata": [
     {
-      "id": 7,
-      "name": "john",
-      "email": "j@v.com",
-      "phno": "12334"
+      "name": "rje",
+      "email": "g@g.com",
+      "phno": "3247",
+      "id": 1
     },
     {
-      "id": 8,
-      "name": "any",
-      "email": "a@v.com",
-      "phno": "12334"
-    },
-    {
-      "id": 9,
-      "name": "jose",
-      "email": "jo@v.com",
-      "phno": "12334"
-    },
-    {
-      "id": 10,
-      "name": "ace",
-      "email": "ac@v.com",
-      "phno": "12334"
-    },
-    {
-      "name": "test1",
-      "email": "test@t.com",
-      "phno": "123456",
-      "id": 11
-    },
-    {
-      "name": "test2",
-      "email": "t@T",
-      "phno": "12345",
-      "id": 12
-    },
-    {
-      "name": "jqee",
-      "email": "qe@e",
-      "phno": "1`2132",
-      "id": 13
-    },
-    {
-      "name": "wqwrq",
-      "email": "wjeqj@febf",
-      "phno": "`32141",
-      "id": 14
-    },
-    {
-      "name": "test3",
-      "email": "t@T.com",
-      "phno": "1234",
-      "id": 15
-    },
-    {
-      "name": "new user",
-      "email": "sab@bs",
-      "phno": "192193",
-      "id": 16
+      "name": "check",
+      "email": "check@check.com",
+      "phno": "12452",
+      "id": 2
     }
   ]
 }

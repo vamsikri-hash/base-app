@@ -14,7 +14,7 @@ export const UserState = (props) => {
     fetch('http://localhost:3001/Userdata')
       .then((res) => res.json())
       .then((data) => {
-        dispatch({ type: 'GSET_USERS', payload: data })
+        dispatch({ type: 'GET_USERS', payload: data })
       })
   }
   const AddData = (user) => {
