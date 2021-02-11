@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 const StyledNavbar = styled.div`
   grid-area: navbar;
@@ -6,6 +6,11 @@ const StyledNavbar = styled.div`
   ul {
     list-style: none;
     font-size: large;
+    li > a {
+      &.selected {
+        background: grey;
+      }
+    }
   }
 `
 export const Navbar = () => {
@@ -13,13 +18,19 @@ export const Navbar = () => {
     <StyledNavbar>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink exact to='/' activeClassName='selected'>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/users'>Users</Link>
+          <NavLink to='/users' activeClassName='selected'>
+            Users
+          </NavLink>
         </li>
         <li>
-          <Link to='/adduser'>Add-Users</Link>
+          <NavLink to='/adduser' activeClassName='selected'>
+            Add-Users
+          </NavLink>
         </li>
       </ul>
     </StyledNavbar>
