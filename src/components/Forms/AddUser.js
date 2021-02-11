@@ -27,12 +27,16 @@ export const AddUser = () => {
     const errors = {}
     if (!values.name || !values.name.trim()) {
       errors.name = 'Required'
-    }
+    } 
     if (!values.email || !values.email.trim()) {
       errors.email = 'Required'
+    } else if(!(/\S+@\S+\.\S+/.test(values.email))){
+      errors.email="email shoud be in form text@text.com"
     }
     if (!values.phno || !values.phno.trim()) {
       errors.phno = 'Required'
+    } else if (values.phno.trim().length<10){
+      errors.phno="Minimum 10 numbers required"
     }
 
     return errors
