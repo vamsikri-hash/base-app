@@ -3,6 +3,8 @@ import { UserContext } from './userContext'
 import { Popover, Button, Intent, Classes } from '@blueprintjs/core'
 import { IconNames } from '@blueprintjs/icons'
 import styled from 'styled-components'
+import { AppToaster } from '../AppToaster';
+
 
 const PopoverContent = styled.div`
   width: 300px;
@@ -39,6 +41,7 @@ export const ConfirmDeleteUser = ({ userId }) => {
               intent={Intent.DANGER}
               onClick={() => {
                 deleteUser(userId)
+                AppToaster.show({message:"user deleted successfully",intent:Intent.DANGER})
               }}
             />
           </div>

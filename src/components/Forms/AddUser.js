@@ -3,6 +3,7 @@ import { UserContext } from '../Users/userContext'
 import { Form, Field } from 'react-final-form'
 import { FormGroup, InputGroup, Button, Intent } from '@blueprintjs/core'
 import styled from 'styled-components'
+import {AppToaster} from "../AppToaster"
 const FormContainer = styled.div`
   margin-top : 50px;
   margin-left: 100px;
@@ -49,7 +50,7 @@ export const AddUser = () => {
       <Form
         onSubmit={addUser}
         validate={validateFields}
-        render={({ handleSubmit, values }) => (
+        render={({ handleSubmit, values ,reset,form}) => (
           <form onSubmit={handleSubmit}>
             <Field name='name'>
               {({ input, meta }) => (
@@ -93,8 +94,20 @@ export const AddUser = () => {
                 </FormGroup>
               )}
             </Field>
-
-            <Button intent={Intent.SUCCESS} onClick={handleSubmit}>
+             
+            <Button intent={Intent.SUCCESS} onClick={async event=>{
+            console.log(event);
+            const error = await handleSubmit(event)
+            console.log(error);
+            if(error){
+                return error;
+            } else {
+               console.log("in form");
+            form.restart()
+            AppToaster.show({message:"Hey! user added successfully",intent:Intent.SUCCESS})
+            }
+            
+          }}>
               Submit
             </Button>
           </form>
