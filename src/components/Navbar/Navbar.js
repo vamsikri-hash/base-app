@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+
 const StyledNavbar = styled.div`
   grid-area: navbar;
   width: 300px;
@@ -8,7 +9,7 @@ const StyledNavbar = styled.div`
     font-size: large;
     li > a {
       &.selected {
-        background: grey;
+        background: greenyellow;
       }
     }
   }
@@ -18,7 +19,8 @@ export const Navbar = () => {
     <StyledNavbar>
       <ul>
         <li>
-          <NavLink exact to='/' activeClassName='selected'>
+        
+          <NavLink exact to='/' activeClassName='selected' >
             Home
           </NavLink>
         </li>
