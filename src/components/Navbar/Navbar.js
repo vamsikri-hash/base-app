@@ -34,7 +34,7 @@ export const NavbarComponent = () => {
         <StyledNavbarHeading>UserBook</StyledNavbarHeading>
         <NavbarDivider />
           <NavLinksContainer>
-            <NavLink exact to='/' activeClassName='selected' >
+            <NavLink exact to='/home' activeClassName='selected' >
             <Icon icon={IconNames.HOME} iconSize={20}/>
              Home
           </NavLink>
