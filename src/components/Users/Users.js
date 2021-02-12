@@ -4,6 +4,8 @@ import { UserContext } from './userContext'
 import styled from 'styled-components'
 
 const UsersContainer = styled.div`
+  margin-top: 50px;
+  margin-left: 100px; 
   margin-right: 100px;
   display: grid;
   grid-area: users;

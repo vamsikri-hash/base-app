@@ -1,40 +1,53 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import {Navbar,NavbarDivider,NavbarGroup,NavbarHeading,Alignment,Classes,Button,Icon} from "@blueprintjs/core"
+import {IconNames} from "@blueprintjs/icons"
 
-const StyledNavbar = styled.div`
-  grid-area: navbar;
-  width: 300px;
-  ul {
-    list-style: none;
-    font-size: large;
-    li > a {
-      &.selected {
-        background: greenyellow;
-      }
-    }
-  }
+const StyledNavbar = styled(Navbar)`
+  height: 100px;
+  display: flex;
+  align-items: center;
 `
-export const Navbar = () => {
+const StyledNavbarHeading=styled(NavbarHeading)`
+ font-weight: bold;
+ font-size: 30px;
+`;
+const NavLinksContainer =styled.div`
+display: flex;
+justify-content: space-evenly;
+width: 400px;
+a{
+  display: flex;
+  align-items : center;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+span{
+  padding-right: 10px;
+}
+`;
+export const NavbarComponent = () => {
   return (
     <StyledNavbar>
-      <ul>
-        <li>
-        
-          <NavLink exact to='/' activeClassName='selected' >
-            Home
+      <NavbarGroup>
+        <StyledNavbarHeading>UserBook</StyledNavbarHeading>
+        <NavbarDivider />
+          <NavLinksContainer>
+            <NavLink exact to='/' activeClassName='selected' >
+            <Icon icon={IconNames.HOME} iconSize={20}/>
+             Home
           </NavLink>
-        </li>
-        <li>
           <NavLink to='/users' activeClassName='selected'>
+          <Icon icon={IconNames.USER} iconSize={20}/>
             Users
           </NavLink>
-        </li>
-        <li>
-          <NavLink to='/adduser' activeClassName='selected'>
+           <NavLink to='/adduser' activeClassName='selected'>
+            <Icon icon={IconNames.ADD} iconSize={20}/>
             Add-Users
           </NavLink>
-        </li>
-      </ul>
+          </NavLinksContainer>
+        </NavbarGroup>
     </StyledNavbar>
   )
 }

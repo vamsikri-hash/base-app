@@ -4,6 +4,8 @@ import { Form, Field } from 'react-final-form'
 import { FormGroup, InputGroup, Button, Intent } from '@blueprintjs/core'
 import styled from 'styled-components'
 const FormContainer = styled.div`
+  margin-top : 50px;
+  margin-left: 100px;
   width: 400px;
   label {
     font-weight: 600;
@@ -21,6 +23,7 @@ export const AddUser = () => {
   const addUser = (values) => {
     console.log(values)
     AddData(values)
+    
   }
   const validateFields = (values) => {
     console.info(values)
