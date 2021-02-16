@@ -1,3 +1,4 @@
+import React from "react"
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import {Navbar,NavbarDivider,NavbarGroup,NavbarHeading,Alignment,Classes,Button,Icon} from "@blueprintjs/core"
@@ -31,7 +32,7 @@ export const NavbarComponent = () => {
   return (
     <StyledNavbar>
       <NavbarGroup>
-        <StyledNavbarHeading>UserBook</StyledNavbarHeading>
+        <StyledNavbarHeading data-test-id="title">UserBook</StyledNavbarHeading>
         <NavbarDivider />
           <NavLinksContainer>
             <NavLink exact to='/home' activeClassName='selected' >

@@ -5,7 +5,7 @@ import { UserState } from './components/Users/userContext'
 import { Users } from './components/Users/Users'
 import { AddUser } from './components/Forms/AddUser'
 import styled from 'styled-components'
-import { Home } from './components/Home/Home';
+import { Home } from './components/Home/Home'
 
 
 const AppContainer = styled.div`
