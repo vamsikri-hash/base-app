@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from "styled-components"
-import { Card, Elevation, Intent } from "@blueprintjs/core"
+import React from "react";
+import styled from "styled-components";
+import { Card, Elevation, Intent } from "@blueprintjs/core";
 const HomeContainer=styled.div`
  margin-top: 100px;
  margin-left: 30%;
@@ -13,15 +13,15 @@ const HomeContainer=styled.div`
  }
 `;
 export const Home = () => {
- return (
-  <HomeContainer>
-       
-       <Card interactive={true} elevation={Elevation.TWO}>
-         <h5>About UserBook</h5>
-         <p>
+	return (
+		<HomeContainer>
+
+			<Card interactive={true} elevation={Elevation.TWO}>
+				<h5>About UserBook</h5>
+				<p>
            This is simple user app to create and view users !
-         </p>
-      </Card>
-  </HomeContainer>
- )
-}
+				</p>
+			</Card>
+		</HomeContainer>
+	);
+};

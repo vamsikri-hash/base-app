@@ -1,19 +1,21 @@
-import React from "react"
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import {Navbar,NavbarDivider,NavbarGroup,NavbarHeading,Alignment,Classes,Button,Icon} from "@blueprintjs/core"
-import {IconNames} from "@blueprintjs/icons"
+import React from "react";
+import {NavLink} from "react-router-dom";
+import styled from "styled-components";
+import {
+	Navbar, NavbarDivider, NavbarGroup, NavbarHeading, Alignment, Classes, Button, Icon,
+} from "@blueprintjs/core";
+import {IconNames} from "@blueprintjs/icons";
 
 const StyledNavbar = styled(Navbar)`
   height: 100px;
   display: flex;
-  align-items: center;
-`
-const StyledNavbarHeading=styled(NavbarHeading)`
+  align-items: center;ss
+`;
+const StyledNavbarHeading = styled(NavbarHeading)`
  font-weight: bold;
  font-size: 30px;
 `;
-const NavLinksContainer =styled.div`
+const NavLinksContainer = styled.div`
 display: flex;
 justify-content: space-evenly;
 width: 400px;
@@ -28,28 +30,26 @@ span{
   padding-right: 10px;
 }
 `;
-export const NavbarComponent = () => {
-  return (
-    <StyledNavbar>
-      <NavbarGroup>
-        <StyledNavbarHeading data-test-id="title">UserBook</StyledNavbarHeading>
-        <NavbarDivider />
-          <NavLinksContainer>
-            <NavLink exact to='/home' activeClassName='selected' >
-            <Icon icon={IconNames.HOME} iconSize={20}/>
-             Home
-          </NavLink>
-          <NavLink to='/users' activeClassName='selected'>
-          <Icon icon={IconNames.USER} iconSize={20}/>
-            Users
-          </NavLink>
-           <NavLink to='/adduser' activeClassName='selected'>
-            <Icon icon={IconNames.ADD} iconSize={20}/>
-            Add-Users
-          </NavLink>
-          </NavLinksContainer>
-        </NavbarGroup>
-    </StyledNavbar>
-  )
-}
+export const NavbarComponent = () => (
+	<StyledNavbar>
+		<NavbarGroup>
+			<StyledNavbarHeading data-testid="title">UserBook</StyledNavbarHeading>
+			<NavbarDivider />
+			<NavLinksContainer>
+				<NavLink exact to="/" activeClassName="selected">
+					<Icon icon={IconNames.HOME} iconSize={20} />
+          Home
+				</NavLink>
+				<NavLink to="/users" activeClassName="selected">
+					<Icon icon={IconNames.USER} iconSize={20} />
+          Users
+				</NavLink>
+				<NavLink to="/adduser" activeClassName="selected">
+					<Icon icon={IconNames.ADD} iconSize={20} />
+          Add Users
+				</NavLink>
+			</NavLinksContainer>
+		</NavbarGroup>
+	</StyledNavbar>
+);
 // diff b/w Link and a tag
