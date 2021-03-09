@@ -25,14 +25,14 @@ export const AddUser = () => {
 
 	const {AddData} = userContext;
 
-	const addUser = (values) => {
+	const addUser = async (values) => {
 		console.log("Sending to Server..");
 		AddData(values);
 		// better to show toaster msg after confirminng from server...
 		AppToaster.show({message: "Hey! user added successfully", intent: Intent.SUCCESS});
 	};
 	const validateFields = (values) => {
-		console.info(values);
+		//console.info(values);
 		const errors = {};
 		if (!values.name || !values.name.trim()) {
 			errors.name = "Required";
@@ -55,8 +55,13 @@ export const AddUser = () => {
 			<Form
 				onSubmit={addUser}
 				validate={validateFields}
-				render={({handleSubmit,form}) => (
-					<form onSubmit={handleSubmit}>
+				render={({handleSubmit,form,reset}) => (
+					<form onSubmit={ (event)=> {
+						//console.log(event);
+						handleSubmit(event).then(()=>{
+							form.restart();
+						});
+					}}>
 						<Field name="name">
 							{({input, meta}) => (
 								<FormGroup label="Name" labelFor="text-input" >

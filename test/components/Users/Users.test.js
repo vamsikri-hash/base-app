@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { act, render, waitFor } from "@testing-library/react";
 import { UserContext, UserState } from "../../../src/components/Users/userContext";
 import { Users } from "../../../src/components/Users/Users";
@@ -32,7 +32,7 @@ const mockDeleteUser = jest.fn(() => {
 });
 
 const setUpUsersScreen = () => {
-	return render(<UserContext.Provider value={{state:{Userdata:[]},getData: mockGetData }}>
+	return render(<UserContext.Provider value={{ state: { Userdata: [] }, getData: mockGetData }}>
 		<Users />
 	</UserContext.Provider>);
 };
@@ -40,11 +40,11 @@ const setUpUsersScreen = () => {
 describe("<Users/>", () => {
 
 	test("should check the number of users", async () => {
-		const { getByTestId, debug , findByText, findByTestId} = setUpUsersScreen();
+		const { getByTestId, debug, findByText, findByTestId ,getByText} = setUpUsersScreen();
 
 		// await findByText("qeuq");
 		//await findByTestId("user-9");
-		debug();
+
 		/* await waitFor(()=>{
 		}); */
 	});

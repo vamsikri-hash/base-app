@@ -36,15 +36,15 @@ export const NavbarComponent = () => (
 			<StyledNavbarHeading data-testid="title">UserBook</StyledNavbarHeading>
 			<NavbarDivider />
 			<NavLinksContainer>
-				<NavLink exact to="/" activeClassName="selected">
+				<NavLink exact to="/" activeClassName="selected" data-testid="home-link">
 					<Icon icon={IconNames.HOME} iconSize={20} />
           Home
 				</NavLink>
-				<NavLink to="/users" activeClassName="selected">
+				<NavLink to="/users" activeClassName="selected" data-testid="users-link">
 					<Icon icon={IconNames.USER} iconSize={20} />
           Users
 				</NavLink>
-				<NavLink to="/adduser" activeClassName="selected">
+				<NavLink to="/adduser" activeClassName="selected" data-testid="adduser-link">
 					<Icon icon={IconNames.ADD} iconSize={20} />
           Add Users
 				</NavLink>
